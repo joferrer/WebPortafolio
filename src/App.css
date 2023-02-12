@@ -1,9 +1,42 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root{
+  --background-color: #121212;
+  --text-color-white: #fff;
+  --social-icon-a-color: rgba(217,217,217,0.1);
+  --social-icon-a-bodercolor: rgba(255,255,255,0.5);
 }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body{
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #121212 !important;
+  color: #fff !important;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+p.danger{
+  color: red;
+}
+
+
+
 
 .logo {
   height: 6em;

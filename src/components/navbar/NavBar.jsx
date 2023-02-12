@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
-
+import React, { useEffect, useState } from 'react';
+import { Navbar, Container, Nav } from 'react-bootstrap';
+import {FacebookRounded, GitHub, LinkedIn} from '@mui/icons-material';
+import './Navbar.css';
+ 
 export const NavBar = () => {
 
     const [activeLink, setactiveLink] = useState('home');
@@ -25,16 +27,15 @@ export const NavBar = () => {
     }
 
   return (
-    <Navbar  expand="lg">
+    <Navbar  expand="lg" className={scrolled ?  "scrolled":""}>
       <Container>
         <Navbar.Brand href="/">
             <img src={''} alt="logo" />
         </Navbar.Brand>
         
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
         
         <Navbar.Toggle aria-controls="basic-navbar-nav">
-            <span className="navbar-toogler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
         </Navbar.Toggle>
 
         <Navbar.Collapse id="basic-navbar-nav">
@@ -47,13 +48,13 @@ export const NavBar = () => {
             </Nav.Link>
             <Nav.Link 
                 href="#link"
-                className= {activeLink === 'home' ? "active navbar-link": "navbar-link"}
+                className= {activeLink === 'skills' ? "active navbar-link": "navbar-link"}
                 onClick={()=>onUpdateActiveLink('skills')}
                     >Skills
             </Nav.Link>
             <Nav.Link 
                 href="#proyects"
-                className= {activeLink === 'home' ? "active navbar-link": "navbar-link"}    
+                className= {activeLink === 'proyects' ? "active navbar-link": "navbar-link"}    
                 onClick={()=>onUpdateActiveLink('Proyects')}
                     >Proyects
                 </Nav.Link>
@@ -61,9 +62,13 @@ export const NavBar = () => {
 
           <span className="navbar-text">
             <div className="social-icon">
-                <a href='#'><img src="" alt="" /></a>
-                <a href='#'><img src="" alt="" /></a>
-                <a href='#'><img src="" alt="" /></a>
+                <a href='#'><FacebookRounded
+                className='social-icon-img' fontSize='large' /></a>
+                <a href='#'><LinkedIn 
+                className='social-icon-img' color='inherit' fontSize='large'/></a>
+                <a href='#'><GitHub 
+                className='social-icon-img'
+                color='inherit' fontSize='large'/></a>
             </div>
             <button className='vvd' onClick={()=> console.log('connect')}><span>Let's connect</span></button>
           </span>

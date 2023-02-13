@@ -19,6 +19,10 @@ nav.navbar .scrolled {
     background-color: var(--background-color);
 }
 
+nav.navbar a.navbar-brand img{
+    width: 55px;
+    height: 55px;
+}
 nav.navbar a.navbar-brand {
     width: 9%;
 }

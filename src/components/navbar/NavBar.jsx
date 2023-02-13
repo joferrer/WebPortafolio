@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import {FacebookRounded, GitHub, LinkedIn} from '@mui/icons-material';
 import './Navbar.css';
- 
+import logo from'../../img/logoJF.png' 
 export const NavBar = () => {
 
     const [activeLink, setactiveLink] = useState('home');
@@ -30,7 +30,7 @@ export const NavBar = () => {
     <Navbar  expand="lg" className={scrolled ?  "scrolled":""}>
       <Container>
         <Navbar.Brand href="/">
-            <img src={''} alt="logo" />
+            <img src={ logo} alt="logo" />
         </Navbar.Brand>
         
         
